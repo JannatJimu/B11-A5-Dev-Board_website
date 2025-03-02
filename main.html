@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Board</title>
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind cdn -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': 'rgba(55, 82, 253, 0.10)',
+                        'primary-color2': 'rgba(55, 82, 253, 0.08)',
+                        'bg-gradient1': 'rgba(55, 82, 253, 1.00)',
+                        'bg-gradient2': 'rgba(155, 168, 248, 1.00)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .poppins-font {
+            font-family: "Poppins", sans-serif;
+
+        }
+    </style>
+
+
+
+</head>
+<body class="poppins-font bg-gradient-to-br from-bg-gradient1 to-bg-gradient2 min-h-screen">
+    <header class="max-w-7xl mx-auto pt-3">
+        <nav class="flex items-center justify-between bg-white shadow-lg rounded-xl p-4">
+            <div class="flex items-center gap-3">
+                <img class="h-[50px]" src="./assets/logo.png" alt="">
+                <h3 class="text-4xl text-gray-600">Dev<span class="font-semibold text-black">Board</span></h3>
+            </div>
+            <div id="backIndex">
+                <ul class="navbar flex gap-2">
+                    <button class="complete-btn bg-[#3752FD] hover:bg-[#2d42d6] transition-all duration-300 pt-2 pb-2 px-4 rounded-lg text-white">Back to Desk</button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="gap-4 mt-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-white mb-6">Blogs</h2>
+        <div class="pb-10 space-y-6"> 
+            <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <h3 class="text-2xl font-semibold">Question-1: What are the different ways to select an element in the DOM?</h3>
+                <div class="border-b-2 border-gray-300 border-dashed mt-2"></div>
+                <p class="text-gray-700 mt-2">We can select DOM elements by using: getElementById, getElementsByClassName, getElementsByTagName, querySelector, and querySelectorAll.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <h3 class="text-2xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent?</h3>
+                <div class="border-b-2 border-gray-300 border-dashed mt-2"></div>
+                <p class="text-gray-700 mt-2">InnerHTML gets or sets HTML with tags, innerText gets only visible text, and textContent includes all text, including hidden elements.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <h3 class="text-2xl font-semibold">Question-3: What is event delegation in the DOM?</h3>
+                <div class="border-b-2 border-gray-300 border-dashed mt-2"></div>
+                <p class="text-gray-700 mt-2">Event delegation is a technique where a parent element handles events for child elements using event bubbling, improving performance.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <h3 class="text-2xl font-semibold">Question-4: What is event bubbling in the DOM?</h3>
+                <div class="border-b-2 border-gray-300 border-dashed mt-2"></div>
+                <p class="text-gray-700 mt-2">Event bubbling is a propagation mechanism where an event starts from the target element and moves up through its parent elements.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <h3 class="text-2xl font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
+                <div class="border-b-2 border-gray-300 border-dashed mt-2"></div>
+                <p class="text-gray-700 mt-2">Use document.createElement(tag) to create, parent.appendChild(element) or parent.append(element) to add, and element.remove() to delete.</p>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/backIndexHtml.js"></script>
+</body>
+
+
+</html>

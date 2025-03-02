@@ -17,6 +17,8 @@
                         clifford: '#da373d',
                         'primary-color': 'rgba(55, 82, 253, 0.10)',
                         'primary-color2': 'rgba(55, 82, 253, 0.08)',
+                        'bg-gradient1': 'rgba(55, 82, 253, 1.00)',
+                        'bg-gradient2': 'rgba(155, 168, 248, 1.00)',
                     }
                 }
             }
@@ -38,28 +40,230 @@
 
 </head>
 
-<body class="poppins-font bg-primary-color">
-    <header class="max-w-7xl min-h-screen  mx-auto pt-4 ">
+<body class="poppins-font bg-primary-color min-h-screen">
+    <header class="max-w-7xl   mx-auto pt-3 ">
         <nav class="flex items-center justify-between bg-white rounded-xl">
             <div class="flex items-center gap-2 p-4">
-                <img class=h-[48px] src="./assets/logo.png" alt="">
+                <img class=h-[40px] src="./assets/logo.png" alt="">
                 <h3 class="text-4xl text-gray-600 ">Dev<span class="font-semibold text-black">Board</span></h3>
             </div>
-           
+
             <div>
                 <ul class="navbar flex gap-2 pr-4">
                     <div class="flex gap-2 bg-primary-color2 rounded-2xl p-2">
                         <li><a href="#"><img class="w-[32px]" src="./assets/checkbox.png" alt=""></a></li>
-                        <li><a href="#"><h3 class="text-3xl font-semibold">23</h3></a></li>
+                        <li><a href="#">
+                                <h3 id="navCount" class="text-3xl font-semibold">23</h3>
+                            </a></li>
                     </div>
-                    
-                    <li><button onclick="changeBackground()"><img class="pl-2 h-[50px] bg-primary-color2 rounded-2xl p-2" src="./assets/theme-btn.png" alt=""></button></li>
-                  </ul>
+
+                    <li><button onclick="changeBackground()"><img
+                                class="pl-2 h-[40px] bg-primary-color2 rounded-2xl p-2" src="./assets/theme-btn.png"
+                                alt=""></button></li>
+                </ul>
             </div>
 
         </nav>
     </header>
+
+    <section class="flex items-start  gap-4 mt-5 max-w-7xl mx-auto ">
+        <!-- Main Content -->
+        <main class=" w-[950px]  min-h-screen mb-10 bg-white p-4 rounded-lg gap-4">
+            <!-- First Row (3 Small Cards) -->
+            <div class="flex gap-4 justify-evenly">
+                <div
+                    class=" w-[250px] h-[110px] flex items-center gap-3 p-2 bg-primary-color2 rounded-lg justify-around">
+                    <img class="h-[50px] bg-white p-2 rounded-xl" src="./assets/checkbox.png" alt="Checkbox">
+                    <div>
+                        <h5 class="text-lg text-gray-700">Task Assigned</h5>
+                        <h3 id="taskCount" class="text-3xl font-semibold text-black">06</h3>
+                    </div>
+                </div>
+
+                <div id="switchMainHtml"
+                    class=" w-[400px] h-[110px] flex items-center space-x-6 p-4 rounded-lg bg-gradient-to-r from-bg-gradient1 to-bg-gradient2">
+                    <img class="h-[60px] ml-2" src="./assets/board.png" alt="Board">
+                    <div>
+                        <h5 class="text-lg text-gray-700">Discover Something</h5>
+                        <h5 class="text-lg text-black font-medium">New Today!</h5>
+                    </div>
+                </div>
+
+                <div class="w-[250px] h-[110px] flex items-center gap-3 p-4 bg-primary-color2 rounded-lg">
+                    <img class="h-[50px] bg-white p-3 rounded-xl" src="./assets/calender.png" alt="Calendar">
+                    <div>
+                        <h5 id="dayContainer" class="text-lg text-gray-700"></h5>
+                        <h5 id="timeContainer" class="text-lg text-black font-medium"></h5>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <!-- Additional Content -->
+            <div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class=" text-start bg-primary-color2 p-4 rounded-lg mt-5 space-y-3">
+                        <div class="rounded-lg">
+                            <h5 class="bg-white pt-1 pb-1 pl-3 pr-3  text-xl rounded-lg inline-block">ShopEase</h5>
+                        </div>
+
+                        <h4 class=" text-lg font-medium">Fix Mobile Button Issue</h4>
+
+                        <p class="text-gray-600  bg-white pt-2 pb-2 pl-3 pr-3 rounded-lg inline-block">
+                            Debug using Chrome DevTools,<br> check for overlapping-
+                        </p>
+                        <div class="border-b-2 border--300 border-dashed mt-2 "></div>
+
+                        <div class=" flex gap-5 pt-1">
+                            <div class="space-y-0">
+                                <h6>Deadline</h6>
+                                <h6 class="text-[#00303C] font-semibold">21 March 2025</h6>
+                            </div>
+                            <button class="complete-btn bg-[#3752FD] p-2 rounded-lg text-white">Completed</button>
+                        </div>
+
+
+                    </div>
+                    <div class=" text-start bg-primary-color2 p-4 rounded-lg mt-5 space-y-3">
+                        <div class="rounded-lg">
+                            <h5 class="bg-white pt-1 pb-1 pl-3 pr-3  text-xl rounded-lg inline-block">CloudSync</h5>
+                        </div>
+
+                        <h4 class="text-lg font-medium">Add Dark Mode</h4>
+
+                        <p class="text-gray-600  bg-white pt-2 pb-2 pl-3 pr-3 rounded-lg inline-block">
+                            Tore the user's preference in localStorage,update CSS -
+                        </p>
+                        <div class="border-b-2 border--300 border-dashed mt-2 "></div>
+
+                        <div class=" flex gap-5 pt-1">
+                            <div class="space-y-0">
+                                <h6>Deadline</h6>
+                                <h6 class="text-[#00303C] font-semibold">21 March 2025</h6>
+                            </div>
+                            <button class="complete-btn bg-[#3752FD] p-2 rounded-lg text-white">Completed</button>
+                        </div>
+
+
+                    </div>
+                    <div class=" text-start bg-primary-color2 p-4 rounded-lg mt-5 space-y-3">
+                        <div class="rounded-lg">
+                            <h5 class="bg-white pt-1 pb-1 pl-3 pr-3  text-xl rounded-lg inline-block">SwiftPay</h5>
+                        </div>
+
+                        <h4 class="text-lg font-medium">Optimize Home page </h4>
+
+                        <p class="text-gray-600  bg-white pt-2 pb-2 pl-3 pr-3 rounded-lg inline-block">
+                            Debug using Chrome DevTools, check for overlapping-
+                        </p>
+                        <div class="border-b-2 border--300 border-dashed mt-2 "></div>
+
+                        <div class=" flex gap-5 pt-1">
+                            <div class="space-y-0">
+                                <h6>Deadline</h6>
+                                <h6 class="text-[#00303C] font-semibold">21 March 2025</h6>
+                            </div>
+                            <button class="complete-btn bg-[#3752FD] p-2 rounded-lg text-white">Completed</button>
+                        </div>
+
+
+                    </div>
+                    <div class=" text-start bg-primary-color2 p-4 rounded-lg mt-5 space-y-3">
+                        <div class="rounded-lg">
+                            <h5 class="bg-white pt-1 pb-1 pl-3 pr-3  text-xl rounded-lg inline-block">Meta</h5>
+                        </div>
+
+                        <h4 class="text-lg font-medium">Add new emoji 🤲</h4>
+
+                        <p class="text-gray-600  bg-white pt-2 pb-2 pl-3 pr-3 rounded-lg inline-block">
+                            Debug using Chrome DevTools, check for overlapping-
+                        </p>
+                        <div class="border-b-2 border--300 border-dashed mt-2 "></div>
+
+                        <div class=" flex gap-5 pt-1">
+                            <div class="space-y-0">
+                                <h6>Deadline</h6>
+                                <h6 class="text-[#00303C] font-semibold">21 March 2025</h6>
+                            </div>
+                            <button class="complete-btn bg-[#3752FD] p-2 rounded-lg text-white">Completed</button>
+                        </div>
+
+
+                    </div>
+                    <div class=" text-start bg-primary-color2 p-4 rounded-lg mt-5 space-y-3">
+                        <div class="rounded-lg">
+                            <h5 class="bg-white pt-1 pb-1 pl-3 pr-3  text-xl rounded-lg inline-block">Google LLC</h5>
+                        </div>
+
+                        <h4 class="text-lg font-medium">Integrate OpenAI API </h4>
+
+                        <p class="text-gray-600  bg-white pt-2 pb-2 pl-3 pr-3 rounded-lg inline-block">
+                            Debug using Chrome DevTools, check for overlapping-
+                        </p>
+                        <div class="border-b-2 border--300 border-dashed mt-2 "></div>
+
+                        <div class=" flex gap-5 pt-1">
+                            <div class="space-y-0">
+                                <h6>Deadline</h6>
+                                <h6 class="text-[#00303C] font-semibold">21 March 2025</h6>
+                            </div>
+                            <button class="complete-btn bg-[#3752FD] p-2 rounded-lg text-white">Completed</button>
+                        </div>
+
+
+                    </div>
+                    <div class=" text-start bg-primary-color2 p-4 rounded-lg mt-5 space-y-3">
+                        <div class="rounded-lg">
+                            <h5 class="bg-white pt-2 pb-2 pl-3 pr-3  text-xl rounded-lg inline-block">Glassdoar</h5>
+                        </div>
+
+                        <h4 class="text-lg font-medium">Improve Job searching </h4>
+
+                        <p class="text-gray-600  bg-white pt-2 pb-2 pl-3 pr-3 rounded-lg inline-block">
+                            Debug using Chrome DevTools, check for overlapping-
+                        </p>
+                        <div class="border-b-2 border--300 border-dashed mt-2 "></div>
+
+                        <div class=" flex gap-5 pt-1">
+                            <div class="space-y-0">
+                                <h6>Deadline</h6>
+                                <h6 class="text-[#00303C] font-semibold">21 March 2025</h6>
+                            </div>
+                            <button class="complete-btn bg-[#3752FD] p-2 rounded-lg text-white">Completed</button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <div class=" sidebar space-y-2 w-[330px] h-[778px] bg-white pt-6 pb-4  rounded-lg">
+            <div class="flex gap-2 justify-center items-center pb-1">
+                <img src="./assets/activity.png" alt="">
+                <h4 class="text-xl font-medium">Activity Log</h4>
+            </div>
+            <div class="flex  justify-center items-center pb-2">
+                <button id="btn-clear" class=" bg-[#3752FD] pt-2 pb-2 pl-5 pr-5 rounded-lg text-[#ffffff] ">Clear
+                    History</button>
+            </div>
+            <div class="border-b-2 border--300 border-dashed mt-2 "></div>
+            <div id="activelogContainer">
+
+            </div>
+        </div>
+    </section>
+
+
+
     <script src="./scripts/theme-btn.js"></script>
+    <script src="./scripts/complete_btn.js"></script>
+    <script src="./scripts/activelogContainer.js"></script>
+    <script src="./scripts/timeContainer.js"></script>
+    <script src="./scripts/switchMainHtml.js"></script>
 </body>
 
 </html>
